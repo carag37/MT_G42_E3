@@ -1,0 +1,34 @@
+CREATE TABLE CLOUD (
+    ID NUMBER (10) NOT NULL,
+    BRAND VARCHAR2(30) NULL,
+    MODEL NUMBER NULL,
+    CATEGORY_ID NUMBER NULL, 
+    NAME VARCHAR2(4000),
+    PRIMARY KEY (ID)
+);
+
+
+SELECT * FROM CLOUD;
+
+
+
+BEGIN
+    INSERT INTO CLOUD (ID,BRAND,MODEL,CATEGORY_ID,NAME) VALUES 
+    (:id, :brand, :model, :category_id, :name);
+    :status_code:=201;
+END;
+
+
+
+BEGIN
+    UPDATE CLOUD SET BRAND=:brand, MODEL=:model, 
+    CATEGORY_ID=:category_id, NAME=:name WHERE ID=:id;
+    :status_code:=201;
+END;
+
+
+
+BEGIN
+DELETE FROM CLOUD  WHERE ID=:id;
+    :status_code:=204;
+END;
