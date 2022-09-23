@@ -1,0 +1,65 @@
+#Crear tabla CLIENT
+CREATE TABLE CLIENT(
+	ID NUMBER NOT NULL,
+	NAME VARCHAR(4000) NULL,
+	EMAIL VARCHAR2(20) NULL,
+	AGE NUMBER NULL,
+	PRIMARY KEY (ID));
+
+#Crear tabla Message
+CREATE TABLE MESSAGE(
+	ID NUMBER NOT NULL,
+	MESSAGETEXT VARCHAR(4000) NULL,
+	PRIMARY KEY (ID));
+
+#CLIENT
+#GET
+SELECT * FROM CLIENT
+
+#POST
+BEGIN
+    INSERT INTO CLIENT(ID, NAME, EMAIL, AGE)
+    VALUES (:id, :name, :email, :age);
+    :status_code:=201;
+END;
+
+#PUT
+BEGIN
+    UPDATE CLIENT
+    SET NAME = :name, EMAIL = :email, AGE = :age
+    WHERE ID = :id;
+    :status_code := 201;
+END;
+
+#DELETE
+BEGIN
+    DELETE FROM CLIENT 
+    WHERE ID = :id;
+    :status_code := 204;
+END;
+
+#MESSAGE
+#GET
+SELECT * FROM MESSAGE
+
+#POST
+BEGIN
+    INSERT INTO MESSAGE(ID, MESSAGETEXT)
+    VALUES (:id, :messagetext);
+    :status_code:=201;
+END;
+
+#PUT
+BEGIN
+    UPDATE MESSAGE
+    SET MESSAGETEXT = :messagetext
+    WHERE ID = :id;
+    :status_code := 201;
+END;
+
+#DELETE
+BEGIN
+    DELETE FROM MESSAGE 
+    WHERE ID = :id;
+    :status_code := 204;
+END;
