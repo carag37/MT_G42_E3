@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nube</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misfunciones.js"></script>
+</head>
+<body onload="traerInformacion()">
+    <h1>Nube</h1>
+    <input type="button" onclick="location.href='index.html';" value="INICIO" />
+    <br>
+    <br>
+    <div id="resultado"></div>
+
+<div>
+    <input type="number" id="id" placeholder="id">
+    <input type="text" id="brand" placeholder="brand">
+    <input type="number" id="model" placeholder="model">
+    <input type="number" id="category_id" placeholder="category_id">
+    <input type="text" id="name" placeholder="name">
+</div>
+
+<button onclick="guardarInformacion()">GUARDAR</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misfunciones.js"></script>
+</head>
+<body onload="traerInformacionCliente()">
+    <h1>Clientes</h1>
+    <input type="button" onclick="location.href='index.html';" value="INICIO" />
+    <br>
+    <br>
+    <div id="resultado"></div>
+
+<div>
+    <input type="number" id="idCliente" placeholder="id">
+    <input type="text" id="nameCliente" placeholder="name">
+    <input type="text" id="email" placeholder="email">
+    <input type="number" id="age" placeholder="age">
+   
+</div>
+
+<button onclick="guardarInformacionCliente()">GUARDAR</button>
+</body>
+
+</body>
+</html>
