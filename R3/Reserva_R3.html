@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Reservas</title>
+  <link href="https://cdn-icons-png.flaticon.com/512/5363/5363451.png" rel="icon" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
+  <script type="text/javascript" src="js/Funciones_R3.js"></script>
+</head>
+
+<body class="antialiased text-slate-200 bg-slate-900" onload='leerDatos("Reservation")'>
+  <div class="flex-block max-w-5xl p-4 md:pd-8 mx-auto mt-8">
+    <div class="bg-white shadow overflow-hidden rounded-lg">
+      <div class="px-4 py-2 flex justify-between">
+        <div class="mx-auto">
+          <img class="rounded-lg w-48" src="http://www.utp.edu.co/cms-utp/data/bin/UTP/web/uploads/media/comunicaciones/img/Logo-MisionTIC-2022.jpg"
+            alt="Mision TIC 2022" />
+          <h1 class="text-xl text-center leading-6 font-bold text-gray-900">
+            Reserva
+          </h1>
+          <p class="text-center max-w-2xl text-sm text-gray-500">
+            Reserve su nube
+          </p>
+        </div>
+        
+      </div>
+
+      <div class="border-t border-gray-300">
+      <div class="grid grid-cols-2 gap-1 border-t border-gray-300">         
+        <div class="container px-4 mt-2 mx-auto">
+          <div class="lg:w-full md:w-full bg-neutral-50 rounded-lg px-20 py-2 flex flex-col md:ml-auto w-full mt-2 md:mt-0 relative z-10 shadow-md">
+            <div class="relative mb-4">
+              <label for="id" class="leading-7 text-sm text-gray-600">ID Usuario</label>
+              <input type="number" id="ClientId" placeholder="Ingrese ID" name="ClientId" class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+              <label for="CloudId" class="leading-7 text-sm text-gray-600">Selecciona tu nube</label>
+              <select type="number" id="CloudId" placeholder="Selecciona nube" name="CloudId" class="w-full bg-white rounded border border-gray-300 text-gray-700 py-1 px-3 dark:placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-20 text-base outline-none leading-8 transition-colors">
+                <option disabled selected class="text-gray-700">Selecciona una opción</option>
+                <option value=1>Nube 1</option>
+                <option value=2>Nube 2</option>
+                <option value=3>Nube 3</option>
+              </select>
+            </div>
+
+            <label for="clouds" class="leading-7 text-sm text-gray-600">Selecciona Fecha de Inicio</label>
+
+            <div class="relative">
+              
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              </div>
+                 <input datepicker datepicker-autohide datepicker-format="yyyy-mm-dd" type="text" id="startDate" name="startDate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+            </div>
+
+            <label for="clouds" class="leading-7 text-sm text-gray-600">Selecciona Fecha de Entrega</label>
+
+            <div class="relative">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              </div>
+              <input datepicker datepicker-autohide datepicker-format="yyyy-mm-dd" type="text" id="devolutionDate" name="devolutionDate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+            </div>
+            
+            
+            
+            <div class="container mb-2 mt-2 mx-auto text-center">
+              <button onclick='crearReg("Reservation")'
+                      class="text-white font-bold bg-[#4164B7] border-0 py-2 px-6 focus:outline-none hover:bg-[#EC2468] rounded text-xl">
+                Registrar
+              </button>
+             
+            </div>
+          </div>
+        </div>
+
+        <div class="container rounded-lg mt-2 px-4 mx-auto">
+        <div class="rounded-lg lg:w-full bg-neutral-50 px-1 py-10 flex flex-col md:ml-auto w-full mt-2 md:mt-0 relative z-10 shadow-md" id="res_tabla">    
+        </div>
+        </div>
+
+        </div>
+         
+        
+        <div class="border-t border-gray-300">
+          <div class="container mb-4 mt-4 mx-auto text-center ">
+            
+            <a class="text-sm font-bold text-gray-500 text-center hover:text-gray-900 cursor-pointer"
+              href="index.html" target="_self">
+              Regresar
+            </a>
+            
+          </div>
+        </div>
+     
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+  <div class="flex-block max-w-xl p-4 md:pd-8 mx-auto mt-2 text-center">
+    Hecho en Colombia - Misión Tic 2022
+  </div>
+
+  
+</body>
+
+</html>

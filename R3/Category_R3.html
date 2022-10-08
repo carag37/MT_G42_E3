@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Nubes</title>
-  <link href="https://images.vexels.com/media/users/3/127173/isolated/lists/7557c099025d716fea37ad5e4dafd2b1-linea-de-nube-azul-icon-svg.png" rel="icon" type="image/png" />
+  <title>Categorías</title>
+  <link href="https://cdn-icons-png.flaticon.com/512/94/94699.png" rel="icon" type="image/png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/Funciones_R3.js"></script>
 </head>
 
-<body class="antialiased text-slate-200 bg-slate-900" onload='leerDatos("Cloud")'>
+<body class="antialiased text-slate-200 bg-slate-900" onload='leerDatos("Category")'>
   <div class="flex-block max-w-5xl p-4 md:pd-8 mx-auto mt-8">
     <div class="bg-white shadow overflow-hidden rounded-lg">
       <div class="px-4 py-2 flex justify-between">
@@ -18,10 +18,10 @@
           <img class="rounded-lg w-48" src="http://www.utp.edu.co/cms-utp/data/bin/UTP/web/uploads/media/comunicaciones/img/Logo-MisionTIC-2022.jpg"
             alt="Mision TIC 2022" />
           <h1 class="text-xl text-center leading-6 font-bold text-gray-900">
-            Nubes
+            Categorías
           </h1>
           <p class="text-center max-w-2xl text-sm text-gray-500">
-            Creación de Nubes
+            Creación de Categorías
           </p>
         </div>
         
@@ -40,32 +40,14 @@
               <label for="nombre" class="leading-7 text-sm text-gray-600">Nombre</label>
               <input type="text" id="nombre" placeholder="Ingrese nombre" name="nombre" class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
-
-            <div class="relative mb-4">
-              <label for="proveedor" class="leading-7 text-sm text-gray-600">Proveedor</label>
-              <input type="text" id="proveedor" placeholder="Ingrese Proveedor" name="proveedor" class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-
-            <div class="relative mb-4">
-              <label for="modelo" class="leading-7 text-sm text-gray-600">Modelo</label>
-              <input type="number" id="modelo" placeholder="Ingrese Año Modelo" name="modelo" class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-
-            <label for="categoryId" class="leading-7 text-sm text-gray-600">Selecciona la categoría</label>
-            <select type="number" id="categoryId" placeholder="Selecciona Categoría" name="categoryId" class="w-full bg-white rounded border border-gray-300 text-gray-700 py-1 px-3 dark:placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-20 text-base outline-none leading-8 transition-colors">
-              <option disabled selected class="text-gray-700">Selecciona una opción</option>
-              <option value=1>Categoría 1</option>
-              <option value=2>Categoría 2</option>
-              <option value=3>Categoría 3</option>
-            </select>
-
+            
             <div class="relative mb-4">
               <label for="description" class="leading-7 text-sm text-gray-600">Descripción</label>
               <textarea type="text" id="description" name="description" placeholder="Ingrese una descripción" class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
             </div> 
             
             <div class="container mb-2 mt-2 mx-auto text-center">
-              <button onclick='crearReg("Cloud")'
+              <button onclick='crearReg("Category")'
                       class="text-white font-bold bg-[#4164B7] border-0 py-2 px-6 focus:outline-none hover:bg-[#EC2468] rounded text-xl">
                 Crear
               </button>
