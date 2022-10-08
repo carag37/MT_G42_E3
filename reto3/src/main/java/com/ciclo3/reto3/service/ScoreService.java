@@ -42,9 +42,6 @@ public class ScoreService {
                 if(score.getStars()!=null){
                     e.get().setStars(score.getStars());
                 }
-                if(score.getReservation()!=null){
-                    e.get().setReservation(score.getReservation());
-                }
                 scoreRepository.save(e.get());
                 return e.get();
             }else{

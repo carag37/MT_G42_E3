@@ -45,15 +45,6 @@ public class ReservationService {
                 if(reservation.getStatus()!=null){
                     e.get().setStatus(reservation.getStatus());
                 }
-                if(reservation.getCloud()!=null){
-                    e.get().setCloud(reservation.getCloud());
-                }
-                if(reservation.getClient()!=null){
-                    e.get().setClient(reservation.getClient());
-                }
-                if(reservation.getScore()!=null){
-                    e.get().setScore(reservation.getScore());
-                }
                 reservationRepository.save(e.get());
                 return e.get();
             }else{

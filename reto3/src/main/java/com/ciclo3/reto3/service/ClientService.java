@@ -37,20 +37,11 @@ public class ClientService {
                 if(client.getName()!=null){
                     e.get().setName(client.getName());
                 }
-                if(client.getEmail()!=null){
-                    e.get().setEmail(client.getEmail());
-                }
                 if(client.getPassword()!=null){
                     e.get().setPassword(client.getPassword());
                 }
                 if(client.getAge()!=null){
                     e.get().setAge(client.getAge());
-                }
-                if(client.getReservations()!=null){
-                    e.get().setReservations(client.getReservations());
-                }
-                if(client.getMessages()!=null){
-                    e.get().setMessages(client.getMessages());
                 }
                 clientRepository.save(e.get());
                 return e.get();

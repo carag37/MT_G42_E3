@@ -31,5 +31,16 @@ public class CloudController {
         return cloudService.save(cloud);
     }
 
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Cloud update(@RequestBody Cloud cloud){
+        return cloudService.update(cloud);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable("id") int id){
+        return cloudService.delete(id);
+    }
 
 }

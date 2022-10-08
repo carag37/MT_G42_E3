@@ -47,15 +47,6 @@ public class CloudService {
                 if(uCloud.getDescription()!=null){
                     e.get().setDescription(uCloud.getDescription());
                 }
-                if(uCloud.getMessages()!=null){
-                    e.get().setMessages(uCloud.getMessages());
-                }
-                if(uCloud.getCategory()!=null){
-                    e.get().setCategory(uCloud.getCategory());
-                }
-                if(uCloud.getReservations()!=null){
-                    e.get().setReservations(uCloud.getReservations());
-                }
                 cloudRepository.save(e.get());
                 return e.get();
             }else{

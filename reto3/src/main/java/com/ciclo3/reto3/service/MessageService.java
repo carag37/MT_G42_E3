@@ -38,12 +38,6 @@ public class MessageService {
                 if(message.getMessageText()!=null){
                     e.get().setMessageText(message.getMessageText());
                 }
-                if(message.getCloud()!=null){
-                    e.get().setCloud(message.getCloud());
-                }
-                if(message.getClient()!=null){
-                    e.get().setClient(message.getClient());
-                }
                 messageRepository.save(e.get());
                 return e.get();
             }else{

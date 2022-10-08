@@ -43,9 +43,6 @@ public class CategoryService {
                 if(category.getDescription()!=null){
                     e.get().setDescription(category.getDescription());
                 }
-                if(category.getClouds()!=null){
-                    e.get().setClouds(category.getClouds());
-                }
                 categoryRepository.save(e.get());
                 return e.get();
             }else{
